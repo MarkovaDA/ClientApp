@@ -1,0 +1,45 @@
+<app-header></app-header>
+
+<div class="container body-content">
+  <h2>
+    Вход
+  </h2>
+  <div class="row">
+    <div class="col-md-3">
+      <div class="alert alert-danger"*ngIf="this.errorMessage.length > 0">
+        {{this.errorMessage}}
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-6">
+      <section>
+        <form action="#" class="form-horizontal" method="post" role="form" (ngSubmit)="onLogin(loginForm)" #loginForm="ngForm">
+          <div class="form-group">
+            <div class="col-md-6">
+              <input class="form-control" id="user-name" name="username" type="text" value="" placeholder="Логин" required [(ngModel)] = "user.username"/>
+            </div>
+          </div>
+          <div class="form-group">
+            <div class="col-md-6">
+              <input class="form-control" id="password" name="password" type="password" placeholder="Пароль" required [(ngModel)] = "user.password"/>
+            </div>
+          </div>
+          <div class="form-group">
+            <div class="col-md-6">
+              <input type="checkbox" value="true" />
+              <span>Запомнить меня?</span>
+            </div>
+          </div>
+          <div class="form-group">
+            <div class="col-md-6">
+              <input type="submit" value="Вход" class="btn btn-default" />
+            </div>
+          </div>
+        </form>
+      </section>
+    </div>
+  </div>
+</div>
+
+

@@ -1,0 +1,32 @@
+<div class="navbar navbar-default">
+  <div class="container">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#" style="height: auto !important;">
+        <div style="text-align: center">
+          <img alt="KPMG-brand" src="Scripts/Distr/assets/images/KPMG.png" style="width:100px;height:auto;">
+          <br/>
+          <span style="color:	#213a7d; font-weight: bold;">Портал сверок</span>
+        </div>
+      </a>
+    </div>
+    <div class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+        <!--<li><a href="/Report">Отчеты</a></li>
+        <li><a href="/Home/About">О компании</a></li>
+        <li><a href="/Home/Contact">Контакты</a></li> -->
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+       <li *ngIf="profile != null">
+          <a>
+            <div>
+              <p>{{profile.userName}}<br>{{profile.roleName}}</p>
+            </div>
+          </a>
+        </li>
+        <li><a *ngIf="profile == null" (click)="onLogin()" style="cursor: pointer;">Вход</a></li>
+        <li><a *ngIf="profile == null" style="cursor: pointer;">Регистрация</a></li>
+        <li><a *ngIf="profile != null" style="cursor: pointer;" (click)="onLogout()">Выход</a></li>
+      </ul>
+    </div>
+  </div>
+</div>

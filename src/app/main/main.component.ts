@@ -21,11 +21,9 @@ export class MainComponent implements OnInit {
               private router: Router) {}
 
   ngOnInit() {
-    console.log('ВЫ в компоненте Main!!!');
     this.isFetched = false;
     this.userService.getUserProfile().subscribe((profile) => {
       this.profile = profile;
-      console.log('Main profile',profile);
       this.isFetched = true;
     }), (error) => {
       this.isFetched = true;

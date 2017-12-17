@@ -5,7 +5,7 @@ import { User } from '../../models/User';
 import { authUrl, apiUrl, userProfileUrl } from './../api.urls';
 import { UserProfile } from '../../models/response/Profile';
 import {Observable} from 'rxjs/Observable';
-import {catchError} from 'rxjs/operators';
+
 
 @Injectable()
 export class AuthService {
@@ -48,7 +48,6 @@ export class AuthService {
         .set('Accept', 'application/json')
         .append('Authorization', `Bearer ${token}`)
     });
-
   }
 
   saveUserMetadata(profile: UserProfile): void {

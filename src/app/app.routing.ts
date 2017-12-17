@@ -7,7 +7,6 @@ import {ClientComponent} from './client/client.component';
 import {SupervisorComponent} from './supervisor/supervisor.component';
 import {MainComponent} from './main/main.component';
 import {EnsureAuthorized} from './routing/EnsureAuthorized';
-import {UserProfileResolver} from './routing/UserProfileResolver';
 
 export const ROUTES: Routes = [
   {
@@ -21,33 +20,26 @@ export const ROUTES: Routes = [
   {
     path: 'Contragent',
     component: ContragentComponent,
-    /*resolve: {
-      profile: UserProfileResolver
-    }*/
-    //canActivate: [EnsureAuthorized]
+    canActivate: [EnsureAuthorized]
   },
   {
     path: 'Admin',
     component: AdminComponent,
-    //canActivate: [AdminAuthorized]
+    canActivate: [EnsureAuthorized]
   },
   {
     path: 'Auditor',
     component: AuditorComponent,
-    //canActivate: [AuditorAuthorized]
+    canActivate: [EnsureAuthorized]
   },
   {
     path: 'Client',
     component: ClientComponent,
-    //canActivate: [EnsureAuthorized]
+    canActivate: [EnsureAuthorized]
   },
   {
     path: 'Supervisor',
     component: SupervisorComponent,
-    //canActivate: [SupervisorAuthorized]
-  },
-  {
-    path: 'logout',
-    component: LoginComponent
+    canActivate: [EnsureAuthorized]
   }
 ];

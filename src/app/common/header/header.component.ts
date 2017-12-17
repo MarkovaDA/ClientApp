@@ -14,7 +14,9 @@ export class HeaderComponent {
   constructor(private authService:AuthService,
               private userService: UserService,
               private router: Router) {}
-
+  /*
+  * Title: {{(message|async).title}} - пример вывода ассинхронной инфы
+  * */
   onLogin() {
     //токена нет или он просрочен
     if (!this.authService.isTokenCorrect()) {

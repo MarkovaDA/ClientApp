@@ -28,6 +28,7 @@ import { ContragentAuthorized } from './routing/ContragentAuthorized';
 import { SupervisorAuthorized } from './routing/SupervisorAuthorized';
 import { EnsureAuthorized } from './routing/EnsureAuthorized';
 import { UserService } from './services/user/user.service';
+import { UserProfileResolver } from './routing/UserProfileResolver';
 
 
 @NgModule({
@@ -60,7 +61,8 @@ import { UserService } from './services/user/user.service';
     AuditorAuthorized,
     AdminAuthorized,
     SupervisorAuthorized,
-    EnsureAuthorized
+    EnsureAuthorized,
+    UserProfileResolver
   ],
   bootstrap: [AppComponent],
 })
